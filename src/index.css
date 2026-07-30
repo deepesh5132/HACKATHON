@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-slate-950 text-slate-100 antialiased font-sans overflow-x-hidden selection:bg-orange-500/30 selection:text-orange-200;
+  }
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-alert {
+  background: rgba(239, 68, 68, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.glass-warning {
+  background: rgba(249, 115, 22, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(249, 115, 22, 0.2);
+}
+
+/* Custom animations */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 20px rgba(239, 68, 68, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+  }
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* SOS Flashing Animation */
+@keyframes emergency-flash {
+  0%, 100% {
+    background-color: rgb(15, 23, 42);
+  }
+  50% {
+    background-color: rgb(185, 28, 28);
+  }
+}
+
+.emergency-active {
+  animation: emergency-flash 1.5s infinite;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.3);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.5);
+}
+
+/* Map override styles */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  background: #0f172a !important;
+}
+
+/* Large text / high contrast accessibility options */
+.accessibility-large-text * {
+  font-size: 1.15rem !important;
+}
+.accessibility-large-text h1, .accessibility-large-text .h1 {
+  font-size: 2.25rem !important;
+}
+.accessibility-large-text h2, .accessibility-large-text .h2 {
+  font-size: 1.75rem !important;
+}
+.accessibility-large-text h3, .accessibility-large-text .h3 {
+  font-size: 1.4rem !important;
+}
+
+.accessibility-high-contrast {
+  filter: contrast(1.25) saturate(1.2);
+}
