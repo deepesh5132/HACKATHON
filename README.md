@@ -1,7 +1,7 @@
-# Sentinel AI - Intelligence with Purpose
+# SAFE-ZONE- Intelligence with Purpose
 ### A Gemma-Powered Offline-First Disaster Response & Emergency Survival Assistant
 
-Sentinel AI is an offline-first, highly accessible emergency companion app designed to save lives before, during, and after natural disasters. By combining local, zero-network rule-based AI expert systems with online Google Generative AI (Gemma/Gemini models), the application provides localized disaster response guidance even when infrastructure is down.
+SAFE-ZONE is an offline-first, highly accessible emergency companion app designed to save lives before, during, and after natural disasters. By combining local, zero-network rule-based AI expert systems with online Google Generative AI (Gemma/Gemini models), the application provides localized disaster response guidance even when infrastructure is down.
 
 ---
 
