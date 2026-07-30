@@ -32,26 +32,27 @@ SAFE-ZONE is an offline-first, highly accessible emergency companion app designe
 ## 📦 Getting Started
 
 ### 1. Installation
-Clone the project, then install dependencies:
+Clone the repository and install the dependencies:
 ```bash
 npm install
 ```
 
+
 ### 2. Add API Credentials
-To utilize online Gemma/Gemini assessments, set up your API Key in the **Settings** view inside the browser, or declare it in your `.env` configuration:
+To enable online Gemini-powered assessments, add your API key via the **Settings** panel in-browser, or set it in your `.env` file:
 ```env
 VITE_GEMINI_KEY=your_gemini_api_key_here
 ```
-*Note: If no API key is specified or you are offline, Sentinel AI automatically switches to the offline expert rule engine.*
+*Note: If no API key is provided, or the device is offline, Sentinel AI automatically falls back to the local expert rule engine.*
 
 ### 3. Run Locally
-Start the development server:
+Launch the development server:
 ```bash
 npm run dev
 ```
 
-### 4. Build Production Bundle
-Build static PWA ready assets:
+### 4. Build for Production
+Generate a static, PWA-ready build:
 ```bash
 npm run build
 ```
